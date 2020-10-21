@@ -48,4 +48,4 @@ We will use RPLY's Lexer Generator and describe a Class to add tokens.
         self.lexer.ignore('\s+')
 ```
 
-We added Lexical Generator for `()`, `+`, `-` and stuff.
+We added Lexical Generator for `()`, `+`, `-` and stuff. Then we call this in `main.py`, and then for a text input we process it lexically.
