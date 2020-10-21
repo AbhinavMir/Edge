@@ -27,3 +27,25 @@ Edge gets converted to LLVM Intermediate Representation
 ![](https://mk0tuzolorusfnc7thxk.kinstacdn.com/wp-content/uploads/2017/02/lexer-parser-center-1030x187.png)
 
 ### Lexer
+
+We will use RPLY's Lexer Generator and describe a Class to add tokens. 
+
+```python
+   def _add_tokens(self):
+        # Print
+        self.lexer.add('PRINT', r'print')
+        # Parenthesis
+        self.lexer.add('OPEN_PAREN', r'\(')
+        self.lexer.add('CLOSE_PAREN', r'\)')
+        # Semi Colon
+        self.lexer.add('SEMI_COLON', r'\;')
+        # Operators
+        self.lexer.add('SUM', r'\+')
+        self.lexer.add('SUB', r'\-')
+        # Number
+        self.lexer.add('NUMBER', r'\d+')
+        # Ignore spaces
+        self.lexer.ignore('\s+')
+```
+
+We added Lexical Generator for `()`, `+`, `-` and stuff.
