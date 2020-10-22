@@ -1,4 +1,4 @@
-notes from [this article](https://blog.usejournal.com/writing-your-own-programming-language-and-compiler-with-python-a468970ae6df).
+<i>Notes from [this article](https://blog.usejournal.com/writing-your-own-programming-language-and-compiler-with-python-a468970ae6df).</i>
 
 While this is starting as a project to better understand programs, compilers and stuff, I am hoping that over the course of next few months, I can develop something worthwhile. I want to mostly develop a Python-like language with Static data types and curly brackets. Native modules for stuff like I/O and easy package management with the robustness of C++ is what I'm going for, with stuff like collections from Java and lack of dependency hell from Go. I enjoy all these languages, and I hope I can make something. But if my lockdown attempts at cooking have taught me something, it is this: the final result doesn't always turn out well in the first try.
 
@@ -49,3 +49,23 @@ We will use RPLY's Lexer Generator and describe a Class to add tokens.
 ```
 
 We added Lexical Generator for `()`, `+`, `-` and stuff. Then we call this in `main.py`, and then for a text input we process it lexically.
+
+### Parser
+
+You can read more about ASTs [here](https://dev.to/abhinavmir/from-source-to-binaries-the-journey-of-a-c-program-4hlj). The parser takes a list of tokens and puts out an AST. We will create a class for every command. Here's an example.
+```python
+class Number():
+    def __init__(self, value):
+        self.value = value
+
+    def eval(self):
+        return int(self.value)
+```
+
+Here's an example of an operator
+
+```python
+class Sum(BinaryOp):
+    def eval(self):
+        return self.left.eval() + self.right.eval()
+```
