@@ -1,7 +1,6 @@
 from rply import ParserGenerator
 from ast import Number, Sum, Sub, Print
 
-
 class Parser():
     def __init__(self):
         self.pg = ParserGenerator(

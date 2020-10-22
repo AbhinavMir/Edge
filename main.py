@@ -2,7 +2,7 @@ from lexer import Lexer
 from _parser import Parser
 
 text_input = """
-print(4 + 4 - 2);
+print(4+124);
 """
 
 lexer = Lexer().get_lexer()

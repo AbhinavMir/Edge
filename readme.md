@@ -70,7 +70,7 @@ class Sum(BinaryOp):
         return self.left.eval() + self.right.eval()
 ```
 
-Now, we need a parser, for you know, parsing. We can use RPLY's ParserGenerator. Refer to `parser.py`.
+Now, we need a parser, for you know, parsing. We can use RPLY's ParserGenerator. Refer to `_parser.py`.
 
 ```python
 from rply import ParserGenerator
@@ -116,9 +116,21 @@ class Parser():
 And then we need to add this to the main file.
 
 ```python
+from lexer import Lexer
+from _parser import Parser
+
+text_input = """
+print(4 + 4 - 2);
+"""
+
+lexer = Lexer().get_lexer()
+tokens = lexer.lex(text_input)
+
 pg = Parser()
 pg.parse()
 parser = pg.get_parser()
 parser.parse(tokens).eval()
 ```
+Now, run `main.py`, you can solve the `text_input` variable. Play around with it, only +/- are the arithmetic operations supported right now.
 
+Now we have a basic compiler for Edge, we just need to create machine code. For this we use _LLVMlite_.
