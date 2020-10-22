@@ -1,9 +1,11 @@
 from rply import ParserGenerator
 from ast import Number, Sum, Sub, Print
 
+
 class Parser():
     def __init__(self):
         self.pg = ParserGenerator(
+            # A list of all token names accepted by the parser.
             ['NUMBER', 'PRINT', 'OPEN_PAREN', 'CLOSE_PAREN',
              'SEMI_COLON', 'SUM', 'SUB']
         )
@@ -15,7 +17,6 @@ class Parser():
 
         @self.pg.production('expression : expression SUM expression')
         @self.pg.production('expression : expression SUB expression')
-
         def expression(p):
             left = p[0]
             right = p[2]
