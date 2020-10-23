@@ -48,7 +48,7 @@ Edge gets converted to LLVM Intermediate Representation
 We will use RPLY's Lexer Generator and describe a Class to add tokens. 
 
 ```python
-   def _add_tokens(self):
+def _add_tokens(self):
         # Print
         self.lexer.add('PRINT', r'print')
         # Parenthesis
