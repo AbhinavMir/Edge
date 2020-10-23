@@ -7,13 +7,13 @@ Edit code in `example.edge`.
 
 ## Todo list
 
-[x] Bootstrap
-[x] + and - operator support
-[x] print statements
-[ ] Generate machine code using LLVM
-[ ] Add command line support
-[ ] Add control structure
-[ ] 
+- [x] Bootstrap
+- [x] + and - operator support
+- [x] print statements
+- [ ] Generate machine code using LLVM
+- [ ] Add command line support
+- [ ] Add control structure
+- [ ] 
 
 While this is starting as a project to better understand programs, compilers and stuff, I am hoping that over the course of next few months, I can develop something worthwhile. I want to mostly develop a Python-like language with Static data types and curly brackets. Native modules for stuff like I/O and easy package management with the robustness of C++ is what I'm going for, with stuff like collections from Java and lack of dependency hell from Go. I enjoy all these languages, and I hope I can make something. But if my lockdown attempts at cooking have taught me something, it is this: the final result doesn't always turn out well in the first try.
 
