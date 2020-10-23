@@ -150,4 +150,4 @@ Now, run `main.py`, you can solve the `text_input` variable. Play around with it
 
 Now we have a basic compiler for Edge, we just need to create machine code. For this we use _LLVMlite_.
 
-<i>Notes from [this article](https://blog.usejournal.com/writing-your-own-programming-language-and-compiler-with-python-a468970ae6df).</i>
+<i>Notes from [this article](https://blog.usejournal.com/writing-your-own-programming-language-and-compiler-with-python-a468970ae6df), Compiler Design class (by Prof. Sendhil Kumar) and other sources. Refer to [my other github repo for compiler design](https://github.com/https://github.com/AbhinavMir/NortheasternCompilerDesign].</i> 
