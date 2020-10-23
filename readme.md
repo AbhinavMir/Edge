@@ -1,4 +1,19 @@
-<i>Notes from [this article](https://blog.usejournal.com/writing-your-own-programming-language-and-compiler-with-python-a468970ae6df).</i>
+## How to run
+
+```python
+python main.py
+```
+Edit code in `example.edge`.
+
+## Todo list
+
+[x] Bootstrap
+[x] + and - operator support
+[x] print statements
+[ ] Generate machine code using LLVM
+[ ] Add command line support
+[ ] Add control structure
+[ ] 
 
 While this is starting as a project to better understand programs, compilers and stuff, I am hoping that over the course of next few months, I can develop something worthwhile. I want to mostly develop a Python-like language with Static data types and curly brackets. Native modules for stuff like I/O and easy package management with the robustness of C++ is what I'm going for, with stuff like collections from Java and lack of dependency hell from Go. I enjoy all these languages, and I hope I can make something. But if my lockdown attempts at cooking have taught me something, it is this: the final result doesn't always turn out well in the first try.
 
@@ -134,3 +149,5 @@ parser.parse(tokens).eval()
 Now, run `main.py`, you can solve the `text_input` variable. Play around with it, only +/- are the arithmetic operations supported right now.
 
 Now we have a basic compiler for Edge, we just need to create machine code. For this we use _LLVMlite_.
+
+<i>Notes from [this article](https://blog.usejournal.com/writing-your-own-programming-language-and-compiler-with-python-a468970ae6df).</i>
