@@ -10,7 +10,7 @@ Edit code in `example.edge`.
 - [x] Bootstrap
 - [x] + and - operator support
 - [x] print statements
-- [ ] Generate machine code using LLVM
+- [x] Generate machine code using LLVM
 - [ ] Add multiplication/division support
 - [ ] Add command line support
 - [ ] Add control structure
